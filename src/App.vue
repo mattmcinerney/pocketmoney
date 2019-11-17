@@ -1,28 +1,37 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<div class="app-container">
+  <SideBar></Sidebar>
+        <div class="container">
+            <h1>November - October transactions</h1>
+            <div class="content">
+              <Chart class="trans-chart" chartdata="chartData"></Chart>
+            </div>
+        </div>
+</div> 
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
 
+
+<script>
+import { data } from './data/transactions.js'
+import SideBar from './components/SideBar.vue'
+import Chart from './components/Chart.vue'
 export default {
   name: 'app',
+  props:['rows'],
   components: {
-    HelloWorld
+    SideBar,
+    Chart
+  },
+  data() {
+    var chartData = data.map(d => d.split(",")[3]).reverse();
+    return {
+      chartData
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  @import '/src/style/main.css';
 </style>
