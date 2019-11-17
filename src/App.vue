@@ -2,7 +2,7 @@
 <div class="app-container">
   <SideBar></Sidebar>
         <div class="container">
-            <h1>November - October transactions</h1>
+            <h1>Transaction Chart</h1>
             <div class="content">
               <Chart class="trans-chart" chartdata="chartData"></Chart>
             </div>
