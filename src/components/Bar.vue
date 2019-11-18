@@ -1,9 +1,9 @@
 <script>
-import { Line } from 'vue-chartjs'
+import { Bar } from 'vue-chartjs'
 import { top10spend } from '../data/top10spend'
 
 export default {
-  extends: Line,
+  extends: Bar,
   data: () => ({
     chartdata: {
       labels: top10spend,
