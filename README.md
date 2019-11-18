@@ -1,4 +1,4 @@
-# pocketmoney7
+# pocketmoney
 
 ## Project setup
 ```
