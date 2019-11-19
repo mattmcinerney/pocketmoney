@@ -3,11 +3,13 @@
     <h1>Budget setup</h1>
     <form class="budget-calculator flex-column">
       <div class="income flex-column">
-        <label for="income">Income</label>
+        <h2>Income</h2>
+        <label for="income">Salary</label>
         <input name="income" placeholder="$0.00" type="number" min="1" step="any" />
       </div>
 
       <div class="expenses flex-column">
+        <h2>Expenses</h2>
         <label for="rent">Rent</label>
         <input name="rent" placeholder="$0.00" type="number" min="1" step="any" />
 
@@ -29,6 +31,7 @@
 
 <script>
 export default {
-  name: "Setup"
+  name: "Setup",
+  components: {}
 };
 </script>

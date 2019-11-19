@@ -2,21 +2,21 @@
   <aside class="sidebar">
     <nav class="nav">
       <ul class="nav__list">
-        <li class="nav__item">
-          <router-link to="/">
+        <router-link to="/">
+          <li class="nav__item">
             <i class="fas fa-home fa-2x"></i>
-          </router-link>
-        </li>
-        <li class="nav__item">
-          <router-link to="/setup">
+          </li>
+        </router-link>
+        <router-link to="/setup">
+          <li class="nav__item">
             <i class="fas fa-pen-square fa-2x"></i>
-          </router-link>
-        </li>
-        <li class="nav__item">
-          <router-link to="/">
-          <i class="fab fa-cc-visa fa-2x"></i>
-          </router-link>
-        </li>
+          </li>
+        </router-link>
+        <router-link to="/">
+          <li class="nav__item">
+            <i class="fab fa-cc-visa fa-2x"></i>
+          </li>
+        </router-link>
       </ul>
     </nav>
   </aside>

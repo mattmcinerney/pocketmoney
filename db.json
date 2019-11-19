@@ -1,9 +1,15 @@
 {
-    "posts": [
-      { "id": 1, "title": "json-server", "author": "typicode" }
-    ],
-    "comments": [
-      { "id": 1, "body": "some comment", "postId": 1 }
-    ],
-    "profile": { "name": "typicode" }
-  }
+  "top10spend": [
+    "2525.92",
+    "2313.84",
+    "2303.84",
+    "1703.84",
+    "1864.84",
+    "2025.84",
+    "2021.29",
+    "2012.55",
+    "2008",
+    "2189.02",
+    "2525.82"
+  ]
+}

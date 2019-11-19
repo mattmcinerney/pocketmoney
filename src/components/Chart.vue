@@ -1,26 +1,19 @@
 <script>
 import { Line } from 'vue-chartjs'
-import { top10spend } from '../data/top10spend'
 
 export default {
   extends: Line,
-  data: () => ({
+  name: "LineChart",
+  props: {
     chartdata: {
-      labels: top10spend,
-      datasets: [
-        {
-          label: 'Last 10 Transactions',
-          backgroundColor: '#63ADF2',
-          data: top10spend
-        }
-      ]
+      type: Array,
+      default: null
     },
     options: {
-      responsive: true,
-      maintainAspectRatio: false
+      type: Object,
+      default: null
     }
-  }),
-
+  },
   mounted () {
     this.renderChart(this.chartdata, this.options)
   }

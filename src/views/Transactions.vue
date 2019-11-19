@@ -1,29 +1,37 @@
 <template>
-  <div>
-    <h1>Transaction Charts</h1>
-    <div class="content flex-row">
-      <Chart class="trans-chart" chartdata="chartData"></Chart>
-      <Bar class="trans-chart" chartdata="chartData"></Bar>
-    </div>
+  <div class="trans-chart flex-row">
+        <line-chart v-if="loaded" :chartdata="chartdata"/>
   </div>
 </template>
 
 <script>
-import { data } from "../data/transactions"
-import Chart from "../components/Chart"
-import Bar from "../components/Bar"
+import axios from 'axios'
+// import { data } from "../data/transactions"
+import LineChart from "../components/Chart"
+// import Bar from "../components/Bar"
+
 
 export default {
   name: "Transactions",
   components: {
-    Chart,
-    Bar
+    LineChart,
   },
-  data() {
-    var chartData = data.map(d => d.split(",")[3]).reverse();
-    return {
-      chartData
-    };
+  data:() => ({
+      loaded: false,
+      chartdata: null
+  }),
+   async mounted () {
+     this.loaded = false
+    try {
+
+      const res = await axios.get(`http://localhost:3000/top10spend`)
+      console.log(res.data + "received")
+      this.chartdata = res.data
+      this.loaded = true
+
+    } catch(e) {
+      console.log(e)
+    }
   }
-};
+}
 </script>

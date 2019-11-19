@@ -2,8 +2,8 @@
   <div class="app-container">
     <SideBar></SideBar>
     <div class="container">
-      <transition mode="out-in">
-      <router-view></router-view>
+      <transition name="fade" mode="out-in">
+        <router-view></router-view>
       </transition>
     </div>
   </div>
@@ -22,5 +22,5 @@ export default {
 </script>
 
 <style>
-  @import "/src/style/main.css";
+@import "/src/style/main.css";
 </style>
