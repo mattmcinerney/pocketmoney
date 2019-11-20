@@ -6,7 +6,7 @@ export default {
   name: "LineChart",
   props: {
     chartdata: {
-      type: Array,
+      type: Object,
       default: null
     },
     options: {
@@ -15,6 +15,7 @@ export default {
     }
   },
   mounted () {
+    console.log(this.chartdata)
     this.renderChart(this.chartdata, this.options)
   }
 }

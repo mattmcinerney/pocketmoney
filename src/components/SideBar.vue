@@ -17,6 +17,11 @@
             <i class="fab fa-cc-visa fa-2x"></i>
           </li>
         </router-link>
+           <router-link to="/ubereats">
+          <li class="nav__item">
+            <i class="fas fa-car fa-2x"></i>
+          </li>
+        </router-link>
       </ul>
     </nav>
   </aside>

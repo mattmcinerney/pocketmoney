@@ -10,7 +10,6 @@ import axios from 'axios'
 import LineChart from "../components/Chart"
 // import Bar from "../components/Bar"
 
-
 export default {
   name: "Transactions",
   components: {
@@ -26,7 +25,11 @@ export default {
 
       const res = await axios.get(`http://localhost:3000/top10spend`)
       console.log(res.data + "received")
-      this.chartdata = res.data
+      const data = {
+        ...res.data,
+        labels: Array.apply(null, Array(10)).map((_, i) => `${i + 1}th last transaction`)
+      }
+      this.chartdata = data
       this.loaded = true
 
     } catch(e) {
